@@ -48,10 +48,47 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;border: 2px solid black;
-    margin: 200px 200px;
+    margin: 200px 200px 0px 200px;
     height: 200px;
     width: 900px;
-
+}
+.title{
+    position: absolute;
+    top: 220px;
+    left: 260px;
+    font-size: xx-large;
+}
+.heightInputLabel{
+    position: absolute;
+    top: 270px;
+    left: 360px;
+    font-size: large;
+}
+.weightInputLabel{
+    position: absolute;
+    top: 270px;
+    left: 565px;
+    font-size: large;
+}
+.ageInputLabel{
+    position: absolute;
+    top: 270px;
+    left: 770px;
+    font-size: large;
+}
+input{
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+button{
+    margin-top:60px;
+    margin-left: 960px;
+    height: 30px;
+    border-radius: 25px;
+    width: 150px;
+    cursor: pointer;
 }
 
 
