@@ -43,7 +43,31 @@ a{
 .logo{
     margin-left: 40px;
     font-size: xx-large;
-}/* Small devices (tablets) */
+}
+.inputsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;border: 2px solid black;
+    margin: 200px 200px;
+    height: 200px;
+    width: 900px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (tablets) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .navbar ul li{
         margin-right: 30px;
