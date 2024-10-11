@@ -11,6 +11,7 @@ body{
     height: 100vh;
     width: 100%;
     font-family:Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
   /* styling head portion  */
 .header{
@@ -22,7 +23,7 @@ body{
     width: 100%;
     height: 70px;
     padding: 20px 20px;
-    background:  rgba(151, 15, 15, 0.1);
+    background:  #eebde2;
 }
 .navbar ul{
     display: flex;
@@ -56,8 +57,9 @@ a{
     height: 200px;
     width: 900px;
     border-radius:100% 100% 13% 81% / 0% 0% 100% 1% ;
-    background-color:rgba(151, 15, 15, 0.1);
+    background-color:#eebde2;
     color: #1C1081;
+    
 }
 .title{
     position: absolute;
@@ -304,9 +306,10 @@ button{
     border-radius: 25px;
     width: 160px;
     cursor: pointer;
-    background:  rgba(151, 15, 15, 0.1);
+    background:  #eebde2;
     color: #1C1081;
     font-size: 15px;
+    
 }
 img {
     position: absolute;
@@ -334,6 +337,33 @@ img {
     }
 
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid rgb(151, 15, 15 ,0.1); 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding: 20px 20px;
+  background: rgb(230, 104, 173);  
+  color: white;  
+  text-align: center;
+}
+
+.footer a {
+  color: white;  
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline; 
+}
+
+
+
 
 
 /* Small devices (tablets) */
@@ -344,7 +374,96 @@ img {
     .logo{
         margin-left: 20px;
     }
+    .inputsContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      margin: 100px 100px 0px 20px;
+      height: 100px;
+      width: 400px;
+      border-radius:100% 100% 13% 81% / 0% 0% 100% 1% ;
+      background-color:#eebde2;
+      color: #1C1081;
+      
+  }
+  .title{
+    position: absolute;
+    top: 105px;
+    left: 50px;
+    font-size: large;
 }
+.heightInputLabel{
+  position: absolute;
+  top: 135px;
+  left: 60px;
+  font-size: 15px;
+}
+.weightInputLabel{
+  position: absolute;
+  top: 135px;
+  left: 180px;
+  font-size: 15px;
+}
+.ageInputLabel{
+  position: absolute;
+  top: 135px;
+  left: 320px;
+  font-size: 15px;
+}
+input{
+  height: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: 25px;
+  width: 100px;
+  
+}
+.theme-switch {
+  position: absolute;
+  top: 105px;
+  left: 370px;
+  --toggle-size: 10px;
+  
+}
+button{
+  margin-top:15px;
+  margin-left: 300px;
+  height: 15px;
+  border-radius: 25px;
+  width: 100px;
+  height: 30px;
+  font-size: 9px;
+  
+}
+img {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 100px;
+  left: 430px;
+  animation-name: place;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes place {
+    0% {
+        top: 100px; 
+    }
+    25% {
+        top: 85px; 
+    }
+    50%{
+         top: 95px;
+    }
+    100%{
+        top: 100px;
+    }
+}
+
+
 /* Extra small devices (phones) */
 @media (max-width: 575.98px) {
     .navbar ul li{
