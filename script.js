@@ -44,6 +44,23 @@ var logo = document.getElementsByClassName("logo")[0];
 
  } 
 ); 
+var results = document.getElementsByClassName("title")[0];
+var checkButton = document.getElementsByClassName("button")[0];
+
+    checkButton.addEventListener('click' , () => {
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        var age = document.getElementById("age").value;
+        
+        
+       var  value = weight/height; 
+    
+       
+    
+
+    });
+    
+
 
 
 
