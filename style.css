@@ -93,7 +93,7 @@ input{
     
 }
 
-/* From Uiverse.io by Galahhad */ 
+/* day/night mode button styling and adjustment at specific portion of the page*/ 
 .theme-switch {
     position: absolute;
     top: 220px;
@@ -299,6 +299,8 @@ input{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+  /* button to check  */
 button{
     margin-top:30px;
     margin-left: 925px;
@@ -310,7 +312,8 @@ button{
     color: #1C1081;
     font-size: 15px;
     
-}
+} 
+    /* image  */
 img {
     position: absolute;
     top: 220px;
@@ -321,7 +324,7 @@ img {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
+    /* for animation of image */
 @keyframes place {
     0% {
         top: 220px; 
@@ -337,6 +340,7 @@ img {
     }
 
 }
+/* footer styling  */
 .footer {
   display: flex;
   justify-content: space-between;

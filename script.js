@@ -1,3 +1,5 @@
+// day/night mode button functionality
+
 var dayNightMode = document.querySelector(".theme-switch__container");
 
 var body = document.getElementsByTagName("body")[0];
@@ -44,7 +46,9 @@ var logo = document.getElementsByClassName("logo")[0];
 
  } 
 ); 
-var results = document.getElementsByClassName("title")[0];
+
+// conditonal output onclick of check button 
+
 var checkButton = document.getElementsByClassName("button")[0];
 
     checkButton.addEventListener('click' , () => {
@@ -66,10 +70,10 @@ var checkButton = document.getElementsByClassName("button")[0];
        else if (value < 18.5) {
              alert(`Your BMI is ${value} at the age of ${age}  which is below 18.5, and considered underweight`);
         }
-            else if (18.5 <= value < 24.9) {
+            else if ((18.5 <= value) && (value< 24.9)) {
                  alert(`Your BMI is ${value} at the age of ${age}  which is  between 18.5 and 24.9, and considered normal`);
             }
-            else if(25 <= value < 29.9) {
+            else if((25 <= value) && (value < 29.9)) {
                  alert(`Your BMI is ${value} at the age of ${age} which is  between 25 and 29.9, and classified as overweight`);
                 }    
             else if (value >= 30) {
