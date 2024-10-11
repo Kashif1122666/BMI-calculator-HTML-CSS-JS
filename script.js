@@ -54,9 +54,31 @@ var checkButton = document.getElementsByClassName("button")[0];
         
         
        var  value = weight/height; 
-    
+       if(/[a-zA-Z]/.test(height) || /[a-zA-Z]/.test(weight)){
+              alert(`please enter some numeric values to input fields`);
+       }
+       else if((height === "") || (weight === "") || (age === "")) {
+              alert(`please enter values to all required input fields`);
+       }
+       else if((height < 0) || (weight < 0)) {
+        alert(`please enter some  positive values to the input fields`);
+ }
+       else if (value < 18.5) {
+             alert(`Your BMI is ${value} at the age of ${age}  which is below 18.5, and considered underweight`);
+        }
+            else if (18.5 <= value < 24.9) {
+                 alert(`Your BMI is ${value} at the age of ${age}  which is  between 18.5 and 24.9, and considered normal`);
+            }
+            else if(25 <= value < 29.9) {
+                 alert(`Your BMI is ${value} at the age of ${age} which is  between 25 and 29.9, and classified as overweight`);
+                }    
+            else if (value >= 30) {
+                 alert(`Your BMI  ${value} at the age of ${age} which is  above than 30 , and considered obesity`) ; 
+                }    
+        else{
+              alert(`error`);
+            }
        
-    
 
     });
     
