@@ -9,9 +9,9 @@ var button = document.getElementsByClassName("button")[0];
 var footer = document.getElementsByClassName("footer")[0];
 var logo = document.getElementsByClassName("logo")[0];
 
-  var isNightMode = false;
-    
-        
+
+
+  var isNightMode = false;    
         dayNightMode.addEventListener('click' , () => {
             if (!isNightMode){
             body.style.backgroundColor="gray";
@@ -55,30 +55,34 @@ var checkButton = document.getElementsByClassName("button")[0];
         var height = document.getElementById("height").value;
         var weight = document.getElementById("weight").value;
         var age = document.getElementById("age").value;
+            
+        // to convert value to numeric
+        height = parseFloat(height);
+        weight = parseFloat(weight);
         
         
-       var  value = weight/height; 
-       if(/[a-zA-Z]/.test(height) || /[a-zA-Z]/.test(weight)){
-              alert(`please enter some numeric values to input fields`);
-       }
-       else if((height === "") || (weight === "") || (age === "")) {
-              alert(`please enter values to all required input fields`);
+       var  value = (weight / (height * height)).toFixed(2); 
+        if((height === "") || (weight === "") || (age === "")) {
+           alert(`please enter values in all required input fields`);
+        }
+        else if(/[a-zA-Z]/.test(height) || /[a-zA-Z]/.test(weight)){
+              alert(`please enter  numeric values to input fields`);
        }
        else if((height < 0) || (weight < 0)) {
         alert(`please enter some  positive values to the input fields`);
- }
-       else if (value < 18.5) {
-             alert(`Your BMI is ${value} at the age of ${age}  which is below 18.5, and considered underweight`);
-        }
-            else if ((18.5 <= value) && (value< 24.9)) {
-                 alert(`Your BMI is ${value} at the age of ${age}  which is  between 18.5 and 24.9, and considered normal`);
+       }
+       else if (value >= 30) {
+        alert(`Your BMI  ${value} at the age of ${age} which is  above than 30 ,  considered obesity`) ; 
+    }    
+    else if((25 <= value) && (value < 29.9)) {
+         alert(`Your BMI is ${value} at the age of ${age} which is  between 25 and 29.9,  classified as overweight`);
+        }    
+        else if ((18.5 <= value) && (value< 24.9)) {
+             alert(`Your BMI is ${value} at the age of ${age}  which is  between 18.5 and 24.9, considered normal`);
             }
-            else if((25 <= value) && (value < 29.9)) {
-                 alert(`Your BMI is ${value} at the age of ${age} which is  between 25 and 29.9, and classified as overweight`);
-                }    
-            else if (value >= 30) {
-                 alert(`Your BMI  ${value} at the age of ${age} which is  above than 30 , and considered obesity`) ; 
-                }    
+       else if (value < 18.5) {
+             alert(`Your BMI is ${value} at the age of ${age}  which is below 18.5,  considered underweight`);
+            }
         else{
               alert(`error`);
             }
